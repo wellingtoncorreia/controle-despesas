@@ -1,0 +1,44 @@
+id,descricao,valor,status,diaPagamento,ano,mes,tipo
+1,Entrada Mês,658.0,paga,15 setembro 2026,2026,09,entrada
+2,Entrada Mês,1222.0,paga,20 setembro 2026,2026,09,entrada
+3,Entrada Mês,3768.34,paga,30 setembro 2026,2026,09,entrada
+4,escolinha da Mônica,329.4,paga,15 setembro 2026,2026,09,despesa
+5,gasolina,100,paga,15 setembro 2026,2026,09,despesa
+6,internet do pai,110.0,paga,20 setembro 2026,2026,09,despesa
+7,pai,270.0,paga,20 setembro 2026,2026,09,despesa
+8,meli,40.0,paga,20 setembro 2026,2026,09,despesa
+9,mãe,100.0,paga,20 setembro 2026,2026,09,despesa
+10,material escolinha da Mônica,300.09,paga,20 setembro 2026,2026,09,despesa
+11,combustivel carro,100.0,paga,20 setembro 2026,2026,09,despesa
+12,pedagio,24,paga,20 setembro 2026,2026,09,despesa
+13,alimentação sorocaba,50,paga,20 setembro 2026,2026,09,despesa
+14,mercado,198.5,paga,20 setembro 2026,2026,09,despesa
+15,faculdade da gui,1421.11,paga,30 setembro 2026,2026,09,despesa
+16,mistura,350.0,pendente,30 setembro 2026,2026,09,despesa
+17,escola  do Emanuel,378.28,paga,30 setembro 2026,2026,09,despesa
+18,luz,280.0,paga,30 setembro 2026,2026,09,despesa
+19,pai,150.0,paga,30 setembro 2026,2026,09,despesa
+20,internet,132.91,paga,30 setembro 2026,2026,09,despesa
+21,Sem parar,25.64,paga,30 setembro 2026,2026,09,despesa
+22,oculos do emanuel,200.0,pendente,30 setembro 2026,2026,09,despesa
+23,Farmácia,100.0,pendente,30 setembro 2026,2026,09,despesa
+24,Entrada Mês,378.0,paga,15 outubro 2026,2026,10,entrada
+25,Entrada Mês,972.0,paga,20 outubro 2026,2026,10,entrada
+26,Entrada Mês,3768.34,paga,30 outubro 2026,2026,10,entrada
+27,Mercado,228.0,pendente,15 outubro 2026,2026,10,despesa
+28,viagem dia 17/10,150.0,pendente,15 outubro 2026,2026,10,despesa
+29,internet,100.0,pendente,20 outubro 2026,2026,10,despesa
+30,internet do pai,110.0,pendente,20 outubro 2026,2026,10,despesa
+31,pai,170.0,pendente,20 outubro 2026,2026,10,despesa
+32,meli,40.0,pendente,20 outubro 2026,2026,10,despesa
+33,escolinha da Mônica,329.0,pendente,20 outubro 2026,2026,10,despesa
+34,google drive,24.99,pendente,20 outubro 2026,2026,10,despesa
+35,combustivel carro,100.0,pendente,20 outubro 2026,2026,10,despesa
+36,faculdade da gui,800.0,pendente,30 outubro 2026,2026,10,despesa
+37,mercado,400.0,pendente,30 outubro 2026,2026,10,despesa
+38,mistura,450.0,pendente,30 outubro 2026,2026,10,despesa
+39,escola  do Emanuel,580.0,pendente,30 outubro 2026,2026,10,despesa
+40,luz,280.0,pendente,30 outubro 2026,2026,10,despesa
+41,material escolinha da Mônica,300.09,pendente,30 outubro 2026,2026,10,despesa
+42,mae,300.0,pendente,30 outubro 2026,2026,10,despesa
+43,última parcela,270.0,pendente,30 outubro 2026,2026,10,despesa

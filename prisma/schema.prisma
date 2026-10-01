@@ -1,0 +1,28 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Ciclo {
+  id          Int          @id @default(autoincrement())
+  titulo      String       // Ex: "15 setembro 2026"
+  mes         String       // Ex: "09"
+  ano         String       // Ex: "2026"
+  lancamentos Lancamento[]
+  createdAt   DateTime     @default(now())
+}
+
+model Lancamento {
+  id           Int      @id @default(autoincrement())
+  descricao    String
+  valor        Float
+  status       String   // "pendente" ou "paga"
+  tipo         String   // "despesa" ou "entrada"
+  cicloId      Int
+  ciclo        Ciclo    @relation(fields: [cicloId], references: [id], onDelete: Cascade)
+  createdAt    DateTime @default(now())
+}
