@@ -24,6 +24,8 @@ export default function KanbanPage() {
   const { ciclos, loading, addExpense, toggleStatus, moveExpense, deleteExpense, deleteCiclo, refresh } = useExpenses(ano, mes);
   const nomeMes = getNomeMes(mes);
 
+  const temContasNesteMes = ciclos.some(ciclo => ciclo.lancamentos.some(l => l.descricao !== "Início da Pasta"));
+
   // Pastas padrão fixas que não devem ter botão de exclusão de coluna
   const baseFolders = [`15 ${nomeMes} ${ano}`, `20 ${nomeMes} ${ano}`, `30 ${nomeMes} ${ano}`];
 
@@ -107,11 +109,13 @@ export default function KanbanPage() {
             </button>
             <span className="text-slate-300">|</span>
             {/* BOTÃO DE REPLICAÇÃO INSERIDO AQUI */}
-            <ReplicateButton 
-              mesAtual={Number(mes)} 
-              anoAtual={Number(ano)} 
-              onSuccess={refresh} 
-            />
+            {!temContasNesteMes && (
+              <ReplicateButton 
+                mesAtual={Number(mes)} 
+                anoAtual={Number(ano)} 
+                onSuccess={refresh} 
+              />
+            )}
           </div>
         </div>
 
