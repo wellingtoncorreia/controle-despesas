@@ -3,6 +3,8 @@ import { useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { useExpenses } from "@/app/hooks/useExpenses";
 import { DragDropContext, Droppable, Draggable, DropResult } from "@hello-pangea/dnd";
+// IMPORTANTE: Ajuste o caminho abaixo para onde você salvou o componente do botão
+import ReplicateButton from "@/app/components/ui/ReplicateButton"; 
 
 const getNomeMes = (numeroMes: string) => {
   const meses: Record<string, string> = {
@@ -95,7 +97,7 @@ export default function KanbanPage() {
           <h1 className="text-3xl font-bold text-slate-800 capitalize flex items-center gap-3">
             Kanban MySQL: {nomeMes} {ano}
           </h1>
-          <div className="flex items-center gap-4 mt-2">
+          <div className="flex items-center gap-4 mt-4">
             <button onClick={() => router.push('/')} className="text-blue-600 text-sm hover:underline font-medium">
               ← Voltar para calendário
             </button>
@@ -103,6 +105,13 @@ export default function KanbanPage() {
             <button onClick={handleAddNewFolder} className="text-emerald-600 text-sm font-bold hover:underline flex items-center gap-1">
               + Adicionar Novo Dia
             </button>
+            <span className="text-slate-300">|</span>
+            {/* BOTÃO DE REPLICAÇÃO INSERIDO AQUI */}
+            <ReplicateButton 
+              mesAtual={Number(mes)} 
+              anoAtual={Number(ano)} 
+              onSuccess={refresh} 
+            />
           </div>
         </div>
 
