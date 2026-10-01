@@ -7,6 +7,7 @@ export interface Lancamento {
   status: 'pendente' | 'paga';
   tipo: 'entrada' | 'despesa';
   cicloId: number;
+  categoria?: string;
 }
 
 export interface CicloKanban {
@@ -32,7 +33,7 @@ export function useExpenses(ano: string, mes: string) {
     fetchCiclos();
   }, [ano, mes]);
 
-  const addExpense = async (expense: { descricao: string; valor: number; tipo: 'entrada' | 'despesa'; diaPagamento: string }) => {
+  const addExpense = async (expense: { descricao: string; valor: number; tipo: 'entrada' | 'despesa'; diaPagamento: string; categoria?: string; }) => {
     await fetch('/api/expenses', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

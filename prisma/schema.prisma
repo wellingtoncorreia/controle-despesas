@@ -17,12 +17,13 @@ model Ciclo {
 }
 
 model Lancamento {
-  id           Int      @id @default(autoincrement())
-  descricao    String
-  valor        Float
-  status       String   // "pendente" ou "paga"
-  tipo         String   // "despesa" ou "entrada"
-  cicloId      Int
-  ciclo        Ciclo    @relation(fields: [cicloId], references: [id], onDelete: Cascade)
-  createdAt    DateTime @default(now())
+  id          Int      @id @default(autoincrement())
+  descricao   String
+  valor       Float
+  status      String   // "pendente" ou "paga"
+  tipo        String   // "despesa" ou "entrada"
+  categoria   String   @default("Outros") // <--- ADICIONAR ESTA LINHA
+  cicloId     Int
+  ciclo       Ciclo    @relation(fields: [cicloId], references: [id], onDelete: Cascade)
+  createdAt   DateTime @default(now())
 }
